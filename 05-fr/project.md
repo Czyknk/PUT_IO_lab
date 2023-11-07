@@ -80,12 +80,12 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc2"></a>
 ### UC2: Złożenie oferty kupna
 
-**Aktorzy:** [Kupujący](#ac1)
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. Kupujący składa ofertę kupna produktu.
+1. [Kupujący](#ac2) składa ofertę kupna produktu.
 2. System prosi o podanie wysokości oferty.
-3. Kupujący podaje wysokość oferty.
+3. [Kupujący](#ac2) podaje wysokość oferty.
 4. System sprawdza czy złożona oferta jest wyższa niż aktualnie najwyższa oferta.
 5. System informuje o pomyśnym wzięciu udziału w aukcji.
 
@@ -103,8 +103,8 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System w momencie zakończenia aukcji sprawdza czy oferta przedstawiona przez kupującego jest nadal najwyższa.
-2. System informuje użytkownika o wygranej aukcji.
+1. System w momencie zakończenia aukcji sprawdza czy oferta przedstawiona przez [kupującyego](#ac2) jest nadal najwyższa.
+2. System informuje o wygranej aukcji.
 
 **Scenariusze alternatywne:** 
 
@@ -119,16 +119,16 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System prosi kupującego o wybranie metody i danych do płatności
-2. Kupujący wybiera metodę płatności oraz wprowadza dane.
+1. System prosi [kupującego](#ac2) o wybranie metody i danych do płatności
+2. [Kupujący](#ac2) wybiera metodę płatności oraz wprowadza dane.
 3. System weryfikuje poprawność danych.
-4. System informuje kupującego o poprawnym dokonaniu płatności.
-5. System informuje sprzedającego o złożeniu płatności przez kupującego.
+4. System informuje [kupującego](#ac2) o poprawnym dokonaniu płatności.
+5. System informuje [Sprzedającego](#ac1) o złożeniu płatności przez kupującego.
 
 **Scenariusze alternatywne:** 
 
 3.A. Podane dane są błędne
-* 3.A.1. System informuje o błędzie we wrowadzonych.
+* 3.A.1. System informuje [kupującego](#ac2) o błędzie podanych danych.
 * 3.A.2. Przejdź do kroku 1.
 
 ---
@@ -139,7 +139,9 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. 
+1. [Kupujący](#ac2) wybiera metodę przekazania produktu i wprowadza dane adresowe.
+2. System weryfikuje poprawność danych.
+3. System informuje o pomyślnym 
 
 **Scenariusze alternatywne:** 
 
