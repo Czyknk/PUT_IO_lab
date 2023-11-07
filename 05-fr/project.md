@@ -114,7 +114,7 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc4"></a>
-### UC3: Przekazanie należność Sprzedającemu
+### UC4: Przekazanie należność
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
@@ -122,7 +122,8 @@ Osoba chcąca zakupić produkt na aukcji.
 1. System prosi kupującego o wybranie metody i danych do płatności
 2. Kupujący wybiera metodę płatności oraz wprowadza dane.
 3. System weryfikuje poprawność danych.
-4. System informuje sprzedającego o złożeniu płatności przez kupującego.
+4. System informuje kupującego o poprawnym dokonaniu płatności.
+5. System informuje sprzedającego o złożeniu płatności przez kupującego.
 
 **Scenariusze alternatywne:** 
 
@@ -133,21 +134,17 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc5"></a>
-### UC3: Przekazanie należność Sprzedającemu
+### UC5: Przekazanie produktu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System prosi kupującego o wybranie metody i danych do płatności
-2. Kupujący wybiera metodę płatności oraz wprowadza dane.
-3. System weryfikuje poprawność danych.
-4. System informuje sprzedającego o złożeniu płatności przez kupującego.
+1. 
 
 **Scenariusze alternatywne:** 
 
-3.A. Podane dane są błędne
-* 3.A.1. System informuje o błędzie we wrowadzonych.
-* 3.A.2. Przejdź do kroku 1.
+3.A. 
+* 3.A.1. 
 
 ---
 
