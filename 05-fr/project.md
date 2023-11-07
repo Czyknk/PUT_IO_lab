@@ -50,10 +50,11 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
 
 [Kupujący](#ac2)
-* ...
+* [UC2](#uc2): Złożenie oferty kupna
+* [UC3](#uc3): Wygranie aukcji
+* [](#): Przekazanie należności sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -77,17 +78,76 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Złożenie oferty kupna
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Kupujący](#ac1)
 
 **Scenariusz główny:**
-1. ...
+1. Kupujący składa ofertę kupna produktu.
+2. System prosi o podanie wysokości oferty.
+3. Kupujący podaje wysokość oferty.
+4. System sprawdza czy złożona oferta jest wyższa niż aktualnie najwyższa oferta.
+5. System informuje o pomyśnym wzięciu udziału w aukcji.
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+4.A. Podana oferta jest niższa niż aktualnie najwyższa oferta
+* 4.A.1. System informuje o błędzie podanych danych.
+* 4.A.2. Przejdź do koku 2.
+
+---
+
+<a id="uc3"></a>
+### UC3: Wygranie aukcji
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. System w momencie zakończenia aukcji sprawdza czy oferta przedstawiona przez kupującego jest nadal najwyższa.
+2. System informuje użytkownika o wygranej aukcji.
+
+**Scenariusze alternatywne:** 
+
+1.A. Podana oferta jest niższa niż aktualnie najwyższa oferta
+* 1.A.1. System informuje o przegraniu aukcji.
+
+---
+
+<a id="uc4"></a>
+### UC3: Przekazanie należność Sprzedającemu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. System prosi kupującego o wybranie metody i danych do płatności
+2. Kupujący wybiera metodę płatności oraz wprowadza dane.
+3. System weryfikuje poprawność danych.
+4. System informuje sprzedającego o złożeniu płatności przez kupującego.
+
+**Scenariusze alternatywne:** 
+
+3.A. Podane dane są błędne
+* 3.A.1. System informuje o błędzie we wrowadzonych.
+* 3.A.2. Przejdź do kroku 1.
+
+---
+
+<a id="uc5"></a>
+### UC3: Przekazanie należność Sprzedającemu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. System prosi kupującego o wybranie metody i danych do płatności
+2. Kupujący wybiera metodę płatności oraz wprowadza dane.
+3. System weryfikuje poprawność danych.
+4. System informuje sprzedającego o złożeniu płatności przez kupującego.
+
+**Scenariusze alternatywne:** 
+
+3.A. Podane dane są błędne
+* 3.A.1. System informuje o błędzie we wrowadzonych.
+* 3.A.2. Przejdź do kroku 1.
 
 ---
 
