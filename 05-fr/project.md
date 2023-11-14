@@ -50,11 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
+* [UC5](#uc5): Przekazanie produktu Kupującemu
 
 [Kupujący](#ac2)
 * [UC2](#uc2): Złożenie oferty kupna
 * [UC3](#uc3): Wygranie aukcji
-* [](#): Przekazanie należności sprzedającemu
+* [UC4](#uc4): Przekazanie należności sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -105,6 +106,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. System w momencie zakończenia aukcji sprawdza czy oferta przedstawiona przez [kupującyego](#ac2) jest nadal najwyższa.
 2. System informuje o wygranej aukcji.
+3. System informuje [Kupującego](#ac2) o konieczności [przekazania należność Sprzedającemu](#uc4)
 
 **Scenariusze alternatywne:** 
 
@@ -141,16 +143,17 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. [Kupujący](#ac2) wybiera metodę przekazania produktu i wprowadza dane adresowe.
 2. System weryfikuje poprawność danych.
-3. System informuje o pomyślnym 
+3. System informuje o pomyślnym zakończeniu aukcji.
 
 **Scenariusze alternatywne:** 
 
-3.A. 
-* 3.A.1. 
+3.A. Wprowadzione dane adresowe są niepoprawne
+* 2.A.1. System informuje [kupującego](#ac2) o błędzie podanych danych.
+* 3.A.2. Przejdź do kroku 1.
 
 ---
 
-## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
+## Obiekty biznesowe (inaczej obiekty dziedzinowe lub informatycjne)
 
 ### BO1: Aukcja
 
@@ -179,6 +182,11 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                  | Aukcja | Produkt | ... |
 | ------------------------------------------------- | ------ | ------- | --- |
 | UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| UC2: Złożenie oferty kupna                        |    C   |    C    | ... |
+| UC3: Wygranie aukcji                              |    C   |         | ... |
+| UC4: Przekazanie należności sprzedającemu         |        |         | ... |
+| UC5: Przekazanie produktu Kupującemu              |    C   |    C    | ... |
+
+
 
 
